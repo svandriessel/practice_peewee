@@ -1,31 +1,29 @@
-from models import db, ZooKeeper, Enclosure, Animal
+from models import db, ZooKeeper, Enclosure, Animal, Photo, PhotoCapturedAnimal
+from peewee import JOIN
 
-def print_animal_names() -> None:
-    ...
+def join_trough_many_to_many():
 
-def print_animal_names_in_savanna_enclosure() -> None:
-    ...
+    # photos_with_phil = (Photo.select(Photo, PhotoCapturedAnimal, Animal)
+    # .join(PhotoCapturedAnimal)
+    # .join(Animal)
+    # .where(Animal.name == "phil"))
+    
+    # for photo in photos_with_phil:
+    #     print(photo.name)
 
-def print_animal_names_in_given_enclosure(enclosure_name: str) -> None:
-    ...
-
-# query N+1
-def print_animal_names_in_given_enclosure_n1(enclosure_name: str) -> None:
-    ...
+    photos_with_phil = (Photo.select(Photo, PhotoCapturedAnimal, Animal)
+    .where(Animal.name == "phil"))
+    
+    for photo in photos_with_phil:
+        print(photo.name)
 
 def main():
     db.connect()
     print("connected")
 
-    print("\nanimal names")
-    print_animal_names()
-    print("\nprinting savanna names")
-    print_animal_names_in_savanna_enclosure()
-    print("\nprinting given enclosure names")
-    print_animal_names_in_given_enclosure("jungle_enclosure")
-    print("\nprinting given enclosure names")
-    print_animal_names_in_given_enclosure_n1("jungle_enclosure")
+    join_trough_many_to_many()
     print("\nclosing")
+
     db.close()
 
 

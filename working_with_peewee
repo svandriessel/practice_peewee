@@ -33,6 +33,19 @@ Animal >- Enclosure >- ZooKeeper
 | 5 | bob | snake | 4 |
 | 6 | carly | parrot | 5 |
 
+### Photo
+
+| id | name | captured_animals
+| --- | ---| ---|
+| 1 | photo1 | [1, 2]
+
+### PhotoCapturedAnimal
+
+| id | photo_id | animal_id |
+|---|---|---|
+| 0 | 1 | 1 |
+| 0 | 1 | 2 |
+
 ### Enclosure
 
 | id | name | feeder |
