@@ -1,0 +1,52 @@
+# Working with peewee
+
+files: https://replit.com/@Sebastiaanvan2/HorribleLightpinkListener#query.py
+
+## Create a database in peewee
+
+- Diagram (show what we want to make)
+- Create models
+- Create database and tables
+- Add data
+
+## Query data
+
+- single
+- multiple
+- joins
+    - inspect objects
+
+## Data
+
+[diagram](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNqVUUFqwzAQ_IrYc_wB3UKrQnEam6Q9tBiCsNaOqLUKsnRIE_-9Sm0sYgqle5JmhtnZ3QvUViFwQPeoZeukqYjFWm-fX9YbNtgsu16Z2D5siv3bTjDONI2KhE2ij6LIhSjFLooaRIVuFN4ZXsbfrTR5Jkkb2R20OpR5YnrvNLWMpMEEPlmHuqUcz5PX63spfqXnZCM7LPIuIiDVne2Dw_-mGGfM5rHvuqVlLNp9WfuJeEL3Z7volNhbwQoMOiO1ivf6sa3AHzHqgcenwkaGzldQ0RClMni7P1MN3LuAKwgnJT1ORwbeyK6fUaG0t24Ch28tzZ8J)
+
+Animal >- Enclosure >- ZooKeeper
+
+### Animal
+
+| id | name | type | enclosure |
+| --- | --- | ---- | --- |
+| 1 | phil | meerkat | 2 |
+| 2 | wendy | meerkat | 2 |
+| 3 | simon | meerkat | 4 |
+| 4 | johny | tiger | 3 |
+| 5 | bob | snake | 4 |
+| 6 | carly | parrot | 5 |
+
+### Enclosure
+
+| id | name | feeder |
+| --- | --- | ---- |
+| 1 | barrel | 2 |
+| 2 | desert_enclosure | 1 |
+| 3 | savanna_enclosure | 2 |
+| 4 | jungle_enclosure | 2 |
+| 5 | jungle_enclosure | 2 |
+
+### Zookeeper
+
+| id | name |
+| --- | --- |
+| 1 | Aidan |
+| 2 | Sharon |
+| 3 | Bob |
